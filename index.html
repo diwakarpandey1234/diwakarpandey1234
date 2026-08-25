@@ -1,64 +1,1100 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Diwakar Pandey | Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<style>
-body{margin:0;font-family:Poppins,sans-serif;background:#0d1117;color:#e6edf3}
-header{background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);padding:70px 20px;text-align:center}
-h1{font-size:3rem;margin:0}h2{color:#58a6ff}
-.container{max-width:1100px;margin:auto;padding:30px}
-.card{background:#161b22;padding:20px;border-radius:12px;margin:20px 0}
-.skills span{display:inline-block;margin:6px;padding:8px 14px;background:#21262d;border-radius:20px}
-.btn{display:inline-block;margin:8px;padding:10px 18px;background:#238636;color:#fff;text-decoration:none;border-radius:8px}
-.btn:hover{background:#2ea043}
-.stats img{max-width:100%;margin:10px 0;border-radius:10px}
-footer{text-align:center;padding:20px;background:#161b22}
-a{color:#58a6ff}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Diwakar Pandey | Java Developer</title>
+
+<meta
+ name="description"
+ content="Diwakar Pandey - Java Developer, Spring Boot Developer, Full Stack Developer and AI enthusiast."
+/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background: #0b1120;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1150px, 92%);
+      margin: auto;
+    }
+
+    /* ================= NAVBAR ================= */
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(11, 17, 32, 0.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid #1f2937;
+    }
+
+    .nav-container {
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #60a5fa;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #cbd5e1;
+      font-size: 0.9rem;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #60a5fa;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 70px;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.18), transparent 30%),
+        radial-gradient(circle at 80% 80%, rgba(124, 58, 237, 0.15), transparent 30%);
+    }
+
+    .hero-content {
+      text-align: center;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .profile-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #3b82f6;
+      margin-bottom: 25px;
+      background: #111827;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 800;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 span {
+      color: #60a5fa;
+    }
+
+    .hero h2 {
+      color: #94a3b8;
+      font-size: clamp(1rem, 2vw, 1.35rem);
+      font-weight: 500;
+      margin-bottom: 25px;
+    }
+
+    .hero-description {
+      max-width: 700px;
+      margin: auto;
+      color: #94a3b8;
+      font-size: 1rem;
+    }
+
+    .social-links {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .social-btn {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #111827;
+      border: 1px solid #374151;
+      color: #cbd5e1;
+      transition: 0.3s;
+    }
+
+    .social-btn:hover {
+      transform: translateY(-4px);
+      color: white;
+      background: #2563eb;
+      border-color: #2563eb;
+    }
+
+    .hero-buttons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 22px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #2563eb;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid #475569;
+      color: #cbd5e1;
+    }
+
+    .btn-outline:hover {
+      border-color: #60a5fa;
+      color: #60a5fa;
+    }
+
+    /* ================= SECTIONS ================= */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #64748b;
+    }
+
+    /* ================= ABOUT ================= */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .card {
+      background: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 14px;
+      padding: 30px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #334155;
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      color: #60a5fa;
+    }
+
+    .about-list {
+      list-style: none;
+    }
+
+    .about-list li {
+      margin-bottom: 12px;
+      color: #cbd5e1;
+    }
+
+    /* ================= SKILLS ================= */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .skill-card {
+      text-align: center;
+      padding: 25px 15px;
+      background: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      border-color: #3b82f6;
+    }
+
+    .skill-card i {
+      font-size: 2rem;
+      margin-bottom: 12px;
+      color: #60a5fa;
+    }
+
+    .skill-card h3 {
+      font-size: 1rem;
+    }
+
+    /* ================= PROJECTS ================= */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .project-card {
+      background: #111827;
+      border: 1px solid #1f2937;
+      border-radius: 14px;
+      padding: 30px;
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      border-color: #3b82f6;
+    }
+
+    .project-icon {
+      font-size: 2rem;
+      color: #60a5fa;
+      margin-bottom: 15px;
+    }
+
+    .project-card h3 {
+      margin-bottom: 12px;
+    }
+
+    .project-card p {
+      color: #94a3b8;
+      margin-bottom: 20px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .tag {
+      background: #1e293b;
+      color: #93c5fd;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 0.75rem;
+    }
+
+    .project-link {
+      color: #60a5fa;
+      font-weight: 600;
+    }
+
+    /* ================= LEARNING ================= */
+
+    .learning-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .learning-list {
+      list-style: none;
+    }
+
+    .learning-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #1f2937;
+      color: #cbd5e1;
+    }
+
+    /* ================= GITHUB ================= */
+
+    .github-stats {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .github-stats img {
+      max-width: 100%;
+      height: 170px;
+      border-radius: 10px;
+    }
+
+    .leetcode-card {
+      text-align: center;
+    }
+
+    .leetcode-card img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    /* ================= CONTACT ================= */
+
+    .contact-box {
+      max-width: 700px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .contact-box p {
+      color: #94a3b8;
+      margin-bottom: 25px;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      padding: 35px 0;
+      border-top: 1px solid #1f2937;
+      text-align: center;
+      color: #64748b;
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media (max-width: 900px) {
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid,
+      .projects-grid,
+      .learning-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .nav-links {
+        display: none;
+      }
+
+      section {
+        padding: 75px 0;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .profile-image {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  </style>
+
 </head>
+
 <body>
-<header>
-<h1>Hi 👋 I'm Diwakar Pandey</h1>
-<p>Computer Science Engineering Student | Java Developer | Full Stack Developer | Spring Boot Enthusiast | DSA Learner</p>
-<a class="btn" href="https://github.com/diwakarpandey1234" target="_blank">GitHub</a>
-<a class="btn" href="https://leetcode.com/u/1234diwakar_pandey/" target="_blank">LeetCode</a>
-<a class="btn" href="https://www.linkedin.com/in/diwakar-pandey-057148360/" target="_blank">LinkedIn</a>
-<a class="btn" href="mailto:diwakarrp1@gmail.com">Email</a>
-</header>
+
+  <!-- ================= NAVIGATION ================= -->
+
+  <nav>
+    <div class="container nav-container">
+
+```
+  <a href="#home" class="logo">
+    Diwakar.dev
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#learning">Learning</a></li>
+    <li><a href="#github">GitHub</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+</div>
+```
+
+  </nav>
+
+  <!-- ================= HERO ================= -->
+
+  <section class="hero" id="home">
+
+```
+<div class="container hero-content">
+
+  <!-- Replace this with your actual image -->
+  <img
+    src="https://github.com/diwakarpandey1234.png"
+    alt="Diwakar Pandey"
+    class="profile-image"
+  />
+
+  <h1>
+    Hi, I'm <span>Diwakar Pandey</span> 👋
+  </h1>
+
+  <h2>
+    Java Developer • Spring Boot • Full Stack Development • AI • DSA
+  </h2>
+
+  <p class="hero-description">
+    Computer Science Engineering student passionate about backend
+    engineering, Java development, full stack applications and
+    AI-powered software solutions.
+  </p>
+
+  <div class="social-links">
+
+    <a
+      href="https://github.com/diwakarpandey1234"
+      target="_blank"
+      class="social-btn"
+      aria-label="GitHub"
+    >
+      <i class="fab fa-github"></i>
+    </a>
+
+    <a
+      href="https://leetcode.com/u/1234diwakar_pandey/"
+      target="_blank"
+      class="social-btn"
+      aria-label="LeetCode"
+    >
+      <i class="fas fa-code"></i>
+    </a>
+
+    <a
+      href="https://www.linkedin.com/in/diwakar-pandey-057148360/"
+      target="_blank"
+      class="social-btn"
+      aria-label="LinkedIn"
+    >
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+
+    <a
+      href="mailto:diwakarrp1@gmail.com"
+      class="social-btn"
+      aria-label="Email"
+    >
+      <i class="fas fa-envelope"></i>
+    </a>
+
+  </div>
+
+  <div class="hero-buttons">
+
+    <a
+      href="https://github.com/diwakarpandey1234"
+      target="_blank"
+      class="btn btn-primary"
+    >
+      <i class="fab fa-github"></i>
+      View GitHub
+    </a>
+
+    <a
+      href="#projects"
+      class="btn btn-outline"
+    >
+      View Projects
+    </a>
+
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+
+  <section id="about">
+
+```
 <div class="container">
-<div class="card">
-<h2>About Me</h2>
-<p>Passionate Computer Science Engineering student interested in Java, Spring Boot, Full Stack Development, Backend Engineering and Data Structures & Algorithms.</p>
-<ul>
-<li>🌱 Learning Spring Boot, React.js, Microservices & System Design</li>
-<li>🚀 Practicing DSA on LeetCode</li>
-<li>📧 <a href="mailto:diwakarrp1@gmail.com">diwakarrp1@gmail.com</a></li>
-</ul>
+
+  <div class="section-title">
+    <h2>👨‍💻 About Me</h2>
+    <p>Developer focused on building real-world applications</p>
+  </div>
+
+  <div class="about-grid">
+
+    <div class="card">
+
+      <h3>Who I Am</h3>
+
+      <ul class="about-list">
+
+        <li>🎓 Computer Science Engineering Student</li>
+
+        <li>
+          💻 Aspiring Software Developer focused on Java,
+          Backend Engineering and Full Stack Development
+        </li>
+
+        <li>
+          🌱 Learning Spring Boot, React.js, REST APIs,
+          Microservices 
+        </li>
+
+        <li>
+          🔐 Interested in Spring Security and JWT Authentication
+        </li>
+
+        <li>
+          🤖 Exploring AI-powered applications
+        </li>
+
+        <li>
+          🧩 Practicing Data Structures & Algorithms on LeetCode
+        </li>
+
+      </ul>
+
+    </div>
+
+
+    <div class="card">
+
+      <h3>My Development Focus</h3>
+
+      <p>
+        I enjoy designing backend systems, creating REST APIs,
+        connecting frontend applications with backend services,
+        working with databases and exploring AI-powered solutions.
+      </p>
+
+      <br>
+
+      <p>
+        My current development path is centered around
+        <strong>Java → Spring Boot → REST APIs → Security →
+        Databases → React → Full Stack Development.</strong>
+      </p>
+
+    </div>
+
+  </div>
+
 </div>
-<div class="card">
-<h2>Tech Stack</h2>
-<div class="skills">
-<span>Java</span><span>Python</span><span>C++</span><span>JavaScript</span><span>HTML</span><span>CSS</span><span>React</span><span>Spring Boot</span><span>Node.js</span><span>Express</span><span>MySQL</span><span>MongoDB</span><span>Git</span><span>GitHub</span>
-</div></div>
-<div class="card stats">
-<h2>GitHub Stats</h2>
-<img src="https://github-readme-stats.vercel.app/api?username=diwakarpandey1234&show_icons=true&theme=tokyonight">
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=diwakarpandey1234&layout=compact&theme=tokyonight">
-<img src="https://streak-stats.demolab.com?user=diwakarpandey1234&theme=tokyonight">
+```
+
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+
+  <section id="skills">
+
+```
+<div class="container">
+
+  <div class="section-title">
+    <h2>🛠️ Tech Stack</h2>
+    <p>Technologies I use and explore</p>
+  </div>
+
+  <div class="skills-grid">
+
+    <div class="skill-card">
+      <i class="fab fa-java"></i>
+      <h3>Java</h3>
+    </div>
+
+    
+
+    <div class="skill-card">
+      <i class="fab fa-js"></i>
+      <h3>JavaScript</h3>
+    </div>
+
+    <div class="skill-card">
+      <i class="fab fa-react"></i>
+      <h3>React.js</h3>
+    </div>
+
+    <div class="skill-card">
+      <i class="fas fa-leaf"></i>
+      <h3>Spring Boot</h3>
+    </div>
+
+    <div class="skill-card">
+      <i class="fas fa-shield-halved"></i>
+      <h3>Spring Security</h3>
+    </div>
+
+    <div class="skill-card">
+      <i class="fas fa-database"></i>
+      <h3>JPA / Hibernate</h3>
+    </div>
+
+    <div class="skill-card">
+      <i class="fas fa-server"></i>
+      <h3>REST APIs</h3>
+    </div>
+
+    <div class="skill-card">
+      <i class="fas fa-database"></i>
+      <h3>MySQL</h3>
+    </div>
+
+    <div class="skill-card">
+      <i class="fab fa-docker"></i>
+      <h3>Docker</h3>
+    </div>
+
+    <div class="skill-card">
+      <i class="fab fa-git-alt"></i>
+      <h3>Git</h3>
+    </div>
+
+    <div class="skill-card">
+      <i class="fas fa-paper-plane"></i>
+      <h3>Bruno</h3>
+    </div>
+
+  </div>
+
 </div>
-<div class="card">
-<h2>LeetCode</h2>
-<img src="https://leetcard.jacoblin.cool/1234diwakar_pandey?theme=dark&font=Poppins&ext=contest">
+```
+
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+
+  <section id="projects">
+
+```
+<div class="container">
+
+  <div class="section-title">
+    <h2>📂 Featured Projects</h2>
+    <p>Some of the projects I'm building</p>
+  </div>
+
+  <div class="projects-grid">
+
+    <!-- AI PROJECT -->
+
+    <div class="project-card">
+
+      <div class="project-icon">
+        🤖
+      </div>
+
+      <h3>AI Watermark Detection Platform</h3>
+
+      <p>
+        An AI-focused project for detecting AI-generated content
+        and exploring watermark-based detection techniques.
+      </p>
+
+      <div class="tags">
+        <span class="tag">React</span>
+        <span class="tag">Spring Boot</span>
+        <span class="tag">Python</span>
+        <span class="tag">FastAPI</span>
+        <span class="tag">AI</span>
+      </div>
+
+      <a
+        href="https://github.com/diwakarpandey1234/projects/tree/main/ai-watermark-detection"
+        target="_blank"
+        class="project-link"
+      >
+        View Repository →
+      </a>
+
+    </div>
+
+
+    <!-- EMPLOYEE MANAGEMENT -->
+
+    <div class="project-card">
+
+      <div class="project-icon">
+        👨‍💼
+      </div>
+
+      <h3>Employee Management System</h3>
+
+      <p>
+        Backend application for managing employees, departments
+        and salary information using Spring Boot.
+      </p>
+
+      <div class="tags">
+        <span class="tag">Java</span>
+        <span class="tag">Spring Boot</span>
+        <span class="tag">JPA</span>
+        <span class="tag">Spring Security</span>
+        <span class="tag">JWT</span>
+        <span class="tag">MySQL</span>
+      </div>
+
+      <span class="project-link">
+        Spring Boot Project
+      </span>
+
+    </div>
+
+
+    <!-- TRACK ENGINE -->
+
+    <div class="project-card">
+
+      <div class="project-icon">
+        🚆
+      </div>
+
+      <h3>TrackEngine</h3>
+
+      <p>
+        A web-based project focused on commuter and travel-related
+        functionality.
+      </p>
+
+      <div class="tags">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+      </div>
+
+      <a
+        href="https://github.com/diwakarpandey1234/track-Engine"
+        target="_blank"
+        class="project-link"
+      >
+        View Repository →
+      </a>
+
+    </div>
+
+
+    <!-- REACT -->
+
+    <div class="project-card">
+
+      <div class="project-icon">
+        ⚛️
+      </div>
+
+      <h3>React Projects</h3>
+
+      <p>
+        Collection of React-based frontend projects and experiments
+        built while learning modern frontend development.
+      </p>
+
+      <div class="tags">
+        <span class="tag">React</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Vite</span>
+        <span class="tag">CSS</span>
+      </div>
+
+      <a
+        href="https://github.com/diwakarpandey1234/React"
+        target="_blank"
+        class="project-link"
+      >
+        View Repository →
+      </a>
+
+    </div>
+
+  </div>
+
 </div>
-<div class="card">
-<h2>Connect</h2>
-<p>📧 <a href="mailto:diwakarrp1@gmail.com">diwakarrp1@gmail.com</a></p>
-<p>💼 <a href="https://www.linkedin.com/in/diwakar-pandey-057148360/">LinkedIn</a></p>
-<p>💻 <a href="https://github.com/diwakarpandey1234">GitHub</a></p>
-<p>🧩 <a href="https://leetcode.com/u/1234diwakar_pandey/">LeetCode</a></p>
+```
+
+  </section>
+
+  <!-- ================= LEARNING ================= -->
+
+  <section id="learning">
+
+```
+<div class="container">
+
+  <div class="section-title">
+    <h2>🎯 Currently Learning</h2>
+    <p>Technologies and concepts I'm improving</p>
+  </div>
+
+  <div class="learning-grid">
+
+    <div class="card">
+
+      <h3>Backend Development</h3>
+
+      <ul class="learning-list">
+
+        <li>☕ Advanced Java</li>
+        <li>🌱 Spring Boot</li>
+        <li>🔐 Spring Security & JWT</li>
+        <li>🌐 REST API Development</li>
+        <li>🗄️ SQL & Database Design</li>
+        <li>🔄 Microservices</li>
+
+      </ul>
+
+    </div>
+
+
+    <div class="card">
+
+      <h3>Problem Solving & AI</h3>
+
+      <ul class="learning-list">
+
+        <li>🧠 Data Structures & Algorithms</li>
+        <li>🤖 Artificial Intelligence</li>
+        <li>📊 Machine Learning</li>
+        <li>⚛️ React.js</li>
+        <li>🐳 Docker</li>
+       
+
+      </ul>
+
+    </div>
+
+  </div>
+
 </div>
+```
+
+  </section>
+
+  <!-- ================= GITHUB ================= -->
+
+  <section id="github">
+
+```
+<div class="container">
+
+  <div class="section-title">
+
+    <h2>📊 GitHub Statistics</h2>
+
+    <p>
+      My coding activity and open-source contributions
+    </p>
+
+  </div>
+
+
+  <div class="github-stats">
+
+    <img
+      src="https://github-readme-stats.vercel.app/api?username=diwakarpandey1234&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github"
+      alt="GitHub Statistics"
+    />
+
+    <img
+      src="https://github-readme-stats.vercel.app/api/top-langs/?username=diwakarpandey1234&layout=compact&theme=tokyonight&hide_border=true"
+      alt="Top Languages"
+    />
+
+  </div>
+
+  <br><br>
+
+  <div class="section-title">
+
+    <h2>🔥 GitHub Streak</h2>
+
+  </div>
+
+  <div class="github-stats">
+
+    <img
+      src="https://streak-stats.demolab.com?user=diwakarpandey1234&theme=tokyonight&hide_border=true"
+      alt="GitHub Streak"
+    />
+
+  </div>
+
+  <br><br>
+
+  <div class="section-title">
+
+    <h2>🧩 LeetCode</h2>
+
+  </div>
+
+  <div class="leetcode-card">
+
+    <a
+      href="https://leetcode.com/u/1234diwakar_pandey/"
+      target="_blank"
+    >
+
+      <img
+        src="https://leetcard.jacoblin.cool/1234diwakar_pandey?theme=dark&font=Poppins&ext=contest"
+        alt="LeetCode Statistics"
+      />
+
+    </a>
+
+  </div>
+
 </div>
-<footer>© 2026 Diwakar Pandey • Made with ❤️</footer>
-</body></html>
+```
+
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+
+  <section id="contact">
+
+```
+<div class="container">
+
+  <div class="section-title">
+    <h2>📫 Let's Connect</h2>
+    <p>Feel free to connect with me</p>
+  </div>
+
+  <div class="contact-box">
+
+    <p>
+      I'm always interested in learning, collaborating on projects
+      and connecting with fellow developers.
+    </p>
+
+    <div class="contact-links">
+
+      <a
+        href="https://github.com/diwakarpandey1234"
+        target="_blank"
+        class="btn btn-outline"
+      >
+        <i class="fab fa-github"></i>
+        GitHub
+      </a>
+
+      <a
+        href="https://www.linkedin.com/in/diwakar-pandey-057148360/"
+        target="_blank"
+        class="btn btn-outline"
+      >
+        <i class="fab fa-linkedin"></i>
+        LinkedIn
+      </a>
+
+      <a
+        href="mailto:diwakarrp1@gmail.com"
+        class="btn btn-primary"
+      >
+        <i class="fas fa-envelope"></i>
+        Email Me
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+```
+
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+```
+<div class="container">
+
+  <p>
+    © 2026 Diwakar Pandey. Built with HTML, CSS & JavaScript.
+  </p>
+
+  <p>
+    <strong>Java • Spring Boot • React • AI • DSA</strong>
+  </p>
+
+</div>
+```
+
+  </footer>
+
+</body>
+</html>
