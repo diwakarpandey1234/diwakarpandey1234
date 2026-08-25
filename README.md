@@ -29,7 +29,7 @@ Computer Science Engineering Student | Java Developer | Full Stack Developer | S
 ### 💻 Programming Languages
 
 <p>
-<img src="https://skillicons.dev/icons?i=java,python,cpp,c,javascript"/>
+<img src="https://skillicons.dev/icons?i=java,cpp,c,javascript"/>
 </p>
 
 ### 🌐 Frontend
@@ -41,19 +41,19 @@ Computer Science Engineering Student | Java Developer | Full Stack Developer | S
 ### ⚙️ Backend
 
 <p>
-<img src="https://skillicons.dev/icons?i=nodejs,express,spring"/>
+<img src="https://skillicons.dev/icons?i=nodejs,spring,springboot"/>
 </p>
 
 ### 🛢 Database
 
 <p>
-<img src="https://skillicons.dev/icons?i=mysql,mongodb"/>
+<img src="https://skillicons.dev/icons?i=mysql"/>
 </p>
 
 ### 🛠 Tools
 
 <p>
-<img src="https://skillicons.dev/icons?i=git,github,idea,vscode,postman"/>
+<img src="https://skillicons.dev/icons?i=git,github,intelliJ,vscode,bruno"/>
 </p>
 
 ---
